@@ -1,0 +1,52 @@
+# Solarian-Dynamixel
+
+Dynamixel servo actuator and bus plugin for the Solarian robotics framework.
+
+## Installation
+
+```bash
+pip install solarian-dynamixel
+```
+
+Or install from source:
+
+```bash
+cd solarian-dynamixel
+pip install -e .
+```
+
+## Usage
+
+After installation, the plugin is automatically discovered by Solarian:
+
+```python
+from solarian.core.module import Module
+from solarian.plugins import actuators
+
+# Get the Dynamixel actuator class
+DynamixelServo = actuators.get("dynamixel")
+
+class MyArmModule(Module):
+    shoulder: DynamixelServo = DynamixelServo(id=1, model="xl330-m077")
+    elbow: DynamixelServo = DynamixelServo(id=2, model="xl330-m077")
+```
+
+The `DynamixelBus` is automatically used for communication - no configuration needed!
+
+## Supported Models
+
+- XL330 series
+- XM430 series
+- XH series
+- Other Dynamixel servo models
+
+## Requirements
+
+- Solarian framework (>=0.1.0)
+- dynamixel-sdk (>=3.7.31)
+
+## Repository
+
+This plugin should be maintained in its own repository:
+- GitHub: `https://github.com/yourorg/solarian-dynamixel`
+- Can be published to PyPI for easy installation

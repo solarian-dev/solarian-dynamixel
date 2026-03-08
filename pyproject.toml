@@ -1,0 +1,23 @@
+[project]
+name = "solarian-dynamixel"
+version = "0.1.0"
+description = "Dynamixel servo actuator and bus plugin for Solarian robotics framework"
+authors = [
+    {name = "Solarian Contributors", email = "solarian@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "solarian>=0.1.0",
+    "dynamixel-sdk>=3.7.31",
+]
+
+[project.entry-points."solarian.actuators"]
+dynamixel = "solarian_dynamixel.actuator:DynamixelServo"
+
+[project.entry-points."solarian.actuator_buses"]
+dynamixel = "solarian_dynamixel.bus:DynamixelBus"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
