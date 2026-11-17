@@ -20,13 +20,14 @@ class DynamixelServo(Servo):
         DynamixelServo = actuators.get("dynamixel")
         
         class MyArmModule(Module):
-            shoulder: DynamixelServo = DynamixelServo(id=1, model="xl330-m288")
-            elbow: DynamixelServo = DynamixelServo(id=2, model="xl330-m288")
+            shoulder = DynamixelServo(model="xl330-m288")
+            elbow = DynamixelServo(model="xl330-m288")
     
     The corresponding DynamixelBus will be automatically used for communication.
     """
     
     bus_class = DynamixelBus
+    default_mode = "range_m100_100"
 
     pos = PosData()
     speed = SpeedData()

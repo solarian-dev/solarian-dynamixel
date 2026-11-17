@@ -11,6 +11,15 @@ classifiers = ["License :: OSI Approved :: Apache Software License"]
 requires-python = ">=3.10"
 dependencies = [
     "solarian>=0.1.0",
+    "pyserial>=3.5",
+    "deepdiff",
+]
+
+[project.optional-dependencies]
+# Only the machine wired to the servos needs the vendor SDK: the driver imports
+# dynamixel_sdk inside the methods that talk to the bus, so the module classes
+# import without it.
+hardware = [
     "dynamixel-sdk>=3.7.31",
 ]
 
