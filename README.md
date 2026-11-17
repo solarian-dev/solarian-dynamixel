@@ -53,6 +53,6 @@ This plugin should be maintained in its own repository:
 
 ## License
 
-[Apache License 2.0](LICENSE). Copyright 2026 PrimaryKey Inc. The driver in `solarian_dynamixel/lerobot/` is derived from [LeRobot](https://github.com/huggingface/lerobot) (Apache 2.0); see [NOTICE](NOTICE).
+[Apache License 2.0](https://github.com/solarian-dev/solarian-dynamixel/blob/main/LICENSE). Copyright 2026 PrimaryKey Inc. The driver in `solarian_dynamixel/lerobot/` is derived from [LeRobot](https://github.com/huggingface/lerobot) (Apache 2.0); see [NOTICE](https://github.com/solarian-dev/solarian-dynamixel/blob/main/NOTICE).
 
 Solarian and the Solarian logo are trademarks of PrimaryKey Inc. See the [trademark policy](https://github.com/solarian-dev/solarian/blob/main/TRADEMARKS.md).
